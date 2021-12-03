@@ -18,9 +18,8 @@ def map_home(request):
     else:
     	ip = request.META.get('REMOTE_ADDR')
     g = GeoIP2()
-    (lat, lng) = g.lat_lon(ip)
-    # lat = 19.0748
-    # lng = 72.8856
+    # (lat, lng) = g.lat_lon(ip)
+    (lat, lng) = (20.0063, 77.006)
     pnt = Point(lng, lat, srid=4326)
     inc_near = Incidences.objects.annotate(
         distance=Distance('location', pnt)
