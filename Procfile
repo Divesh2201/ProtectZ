@@ -1,2 +1,2 @@
 
-web: gunicorn Co_Vaccine.wsgi
+web: gunicorn ProtectZ.wsgi
